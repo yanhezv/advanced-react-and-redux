@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Root from 'Root';
 import App from 'components/App';
@@ -8,7 +9,9 @@ import reportWebVitals from 'reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Root>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Root>
   </React.StrictMode>,
   document.getElementById('root')

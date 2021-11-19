@@ -1,12 +1,15 @@
 import React from "react";
 import CommentBox from "components/CommentBox";
 import CommentList from "components/CommentList";
+import { Route, Routes } from "react-router-dom";
 
 export default () => {
   return (
     <div>
-      <CommentBox />
-      <CommentList />
+      <Routes>
+        <Route path="/post" element={<CommentBox />}/>
+        <Route path="/" element={<CommentList />}/>
+      </Routes>
     </div>
   );
 };
