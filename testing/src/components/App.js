@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 
 import CommentBox from 'components/CommentBox';
 import CommentList from 'components/CommentList';
@@ -43,10 +43,8 @@ class App extends Component {
     return (
       <div>
         {this.renderHeader()}
-        <Routes>
-          <Route path="/post" element={<CommentBox />} />
-          <Route path="/" element={<CommentList />} />
-        </Routes>
+        <Route path="/post" component={CommentBox} />
+        <Route path="/" component={CommentList} />
       </div>
     );
   }
